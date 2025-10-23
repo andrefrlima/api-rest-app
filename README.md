@@ -50,6 +50,7 @@ DB_HOST=127.0.0.1
 DB_USER=seu_usuario
 DB_PASS=sua_senha
 DB_NAME=api_app
+DB_PORT=3306
 API_TOKEN=1234567890
 ```
 
