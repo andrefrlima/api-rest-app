@@ -1,0 +1,39 @@
+### Cole este arquivo na extensão REST Client (VS Code) ou use curl/Postman.
+
+@base = http://localhost:4000
+@token = 1234567890
+@json = application/json
+
+### Listar tarefas
+GET {{base}}/tarefas
+x-api-token: {{token}}
+
+### Obter 1 tarefa
+GET {{base}}/tarefas/1
+x-api-token: {{token}}
+
+### Criar tarefa
+POST {{base}}/tarefas
+Content-Type: {{json}}
+x-api-token: {{token}}
+
+{
+  "tarefa": "Estudar Node",
+  "descricao": "CRUD simples",
+  "responsavel": "Vanderlei"
+}
+
+### Atualizar tarefa
+PUT {{base}}/tarefas/1
+Content-Type: {{json}}
+x-api-token: {{token}}
+
+{
+  "tarefa": "Estudar Node (atualizado)",
+  "descricao": "CRUD simples e token",
+  "responsavel": "Vanderlei"
+}
+
+### Excluir tarefa
+DELETE {{base}}/tarefas/1
+x-api-token: {{token}}
