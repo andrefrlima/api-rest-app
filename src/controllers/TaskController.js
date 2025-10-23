@@ -71,7 +71,7 @@ class TaskController {
       const { id } = req.params
       const deleted = await database('tarefas').where({ id }).del()
       if (!deleted) return res.status(404).json({ error: 'Tarefa não encontrada' })
-      return res.json({ message: 'Tarefa excluída com sucesso' })
+      return res.status(204).send()
     } catch (err) {
       console.error(err)
       return res.status(500).json({ error: 'Erro ao excluir tarefa' })
